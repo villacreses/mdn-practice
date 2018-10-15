@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embedding Examples</title>
+  </head>
+  <body>
+    <h1>Embedding practice</h1>
+    <!-- 
+      The alt text helps blind visitors and displays to everyone when 
+      the image can otherwise not be found. 
+
+      The title gives a tooltip on hover.  It helps with SEO, but lacks accessibility; 
+      it's preferable to use the alt field and include any other relevant information
+      in the main text of the page.
+
+      Adding the height and width attributes tells the browser to leave that amount of 
+      designated space for the image, which can save on load time. However, do not use these 
+      attributes to manipulate the image size; use CSS for that.
+    -->
+
+    <figure>
+      <img 
+        src="media/clipart-1.png" 
+        alt="A cartoon of a cat and fish" 
+        width="400px" 
+        height="300px"
+        title="This is just some random clip art"
+      >
+      <figcaption>This is a caption for the cat and fish clip art.</figcaption>
+    </figure>
+    <!-- 
+      Figure and figcaption builds a semantic connection between the text and the image
+    -->
+
+    <video src="media/rabbit320.webm" controls autoplay loop>
+      <!-- All attributes in the video tag above are optional -->
+      <!-- This p is fallback content, this should be self-explanatory -->
+      <p>
+        Your browser does not support HTML5 video. Here is a 
+        <a href="media/rabbit320.webm">link to the video</a> instead.
+      </p>
+    </video>
+      <!-- 
+        The browser will go through the source elements and play the first one that it has
+        the codec to support.  The type attribute can be read immediately by the browser; 
+        without it, the browser will attempt to load and play every source video, leading 
+        to slower performance
+      -->
+    <video controls muted width="400" height="400" poster="media/poster.png">
+      <!-- All attributes in the video tag above are also optional -->
+      <source src="media/rabbit320.mp4" type="video/mp4">
+      <source src="media/rabbit320.webm" type="video/webm">
+      <p>
+        Your browser does not support HTML5 video. Here is a 
+        <a href="media/rabbit320.webm">link to the video</a> instead.
+      </p>
+    </video>
+
+
+  </body>
+</html>
